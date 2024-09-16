@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #201d24;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #201d24;
+    --foreground: #ffffff;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Ubuntu', sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.country-list {
+  @apply grid grid-cols-2 gap-4 w-5/6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 mx-auto;
+}
+
+.list-item {
+  @apply bg-teal-800 text-white font-semibold text-lg p-4 rounded-sm text-center hover:bg-teal-950 align-middle;
+}
+
+.loading {
+  @apply text-center text-2xl mt-96;
+}
+
+.flag {
+  @apply h-48 my-4;
+}
+
+.info-div {
+  @apply p-8 pb-20 mx-auto;
+
+  .country-name {
+    @apply text-3xl font-bold mb-4;
+  }
+}
