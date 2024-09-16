@@ -47,7 +47,7 @@ cd ../country-info-backend
 
 Start the backend server:
 ```bash
-npm start
+node src/index.js
 ```
 
 The backend server will run at http://localhost:5000.
